@@ -8,7 +8,7 @@ import picocli.CommandLine;
 import picocli.CommandLine.IFactory;
 
 @Component
-@Profile("!test") // <--- ВАЖНО: Не запускать этот бин в тестах!
+@Profile("!test")
 public class AppStartupRunner implements CommandLineRunner, ExitCodeGenerator {
 
     private final IFactory factory;
@@ -21,7 +21,7 @@ public class AppStartupRunner implements CommandLineRunner, ExitCodeGenerator {
     }
 
     @Override
-    public void run(String... args) {
+    public void run(String[] args) {
         exitCode = new CommandLine(startCommand, factory).execute(args);
     }
 

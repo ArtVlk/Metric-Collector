@@ -26,7 +26,6 @@ public class TextProtocolParser {
             throw new IllegalArgumentException("Value must be a number");
         }
 
-        // Если таймстемп не передан, берем текущее время
         Instant timestamp = (parts.length > 2)
                 ? Instant.ofEpochMilli(Long.parseLong(parts[2]))
                 : Instant.now();

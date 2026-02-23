@@ -9,9 +9,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-/**
- * Runnable задача, которая выполняется в отдельном виртуальном потоке для каждого клиента.
- */
 public class ConnectionHandler implements Runnable {
 
     private static final Logger log = LoggerFactory.getLogger(ConnectionHandler.class);
